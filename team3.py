@@ -30,7 +30,7 @@ def move(my_history, their_history, my_score, their_score):
     total=0
     
     if len(their_history)==0:
-        return b
+        return 'b'
         x+1
     else:
         for char in their_history:
@@ -44,11 +44,14 @@ def move(my_history, their_history, my_score, their_score):
                 total+=0
             n+=1
         percentb=float(total)/float(len(their_history))
-        if percentb > 0.3
+        if percentb > 0.3:
             return 'b'
-        if percentb < 0.3
-            return 'c'
-    
+        if percentb < 0.3:
+            if percentb < .1:
+                return 'b'
+            else:
+                return 'c'
+        
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
