@@ -47,11 +47,16 @@ def move(my_history, their_history, my_score, their_score):
         if percentb > 0.3:
             return 'b'
         if percentb < 0.3:
+<<<<<<< Updated upstream
             if percentb < .1:
                 return 'b'
             else:
                 return 'c'
         
+=======
+            return 'c'
+    
+>>>>>>> Stashed changes
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
